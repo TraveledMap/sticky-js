@@ -1,6 +1,5 @@
 # sticky-js
-[![npm version](https://badge.fury.io/js/sticky-js.svg)](https://badge.fury.io/js/sticky-js)
-[![Bower version](https://badge.fury.io/bo/sticky.js.svg)](https://badge.fury.io/bo/sticky.js)
+This library is a fork from [Rgalus' sticky js](https://github.com/rgalus/sticky-js), it adds the enable / disable feature
 
 > Sticky-js is a library for sticky elements written in vanilla javascript. With this library you can easily set sticky elements on your website. It's also responsive.
 
@@ -147,11 +146,3 @@ If you need this library working with older browsers you should use ECMAScript 5
 [Full support](http://caniuse.com/#search=ECMAScript%205)
 
 * * *
-
-### Website
-
-https://rgalus.github.io/sticky-js/
-
-### License
-
-[MIT License](https://github.com/rgalus/sticky-js/blob/master/LICENSE)

@@ -250,6 +250,10 @@ var Sticky = /*#__PURE__*/function () {
   }, {
     key: "setPosition",
     value: function setPosition(element) {
+      if (element.isDisabled) {
+        return;
+      }
+
       this.css(element, {
         position: '',
         width: '',
@@ -366,6 +370,33 @@ var Sticky = /*#__PURE__*/function () {
         _this6.destroyScrollEvents(element);
 
         delete element.sticky;
+      });
+    }
+  }, {
+    key: "enable",
+    value: function enable() {
+      var _this7 = this;
+
+      this.forEach(this.elements, function (element) {
+        element.isDisabled = false;
+
+        _this7.setPosition(element);
+      });
+    }
+  }, {
+    key: "disable",
+    value: function disable() {
+      var _this8 = this;
+
+      this.forEach(this.elements, function (element) {
+        element.isDisabled = true;
+
+        _this8.css(element, {
+          position: "",
+          width: "",
+          top: "",
+          left: ""
+        });
       });
     }
     /**

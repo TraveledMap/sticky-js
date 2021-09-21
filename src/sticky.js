@@ -235,6 +235,9 @@ class Sticky {
    * @param {node} element - Element that will be positioned if it's active
    */
    setPosition(element) {
+     if (element.isDisabled) {
+       return;
+     }
     this.css(element, { position: '', width: '', top: '', left: '' });
 
     if ((this.vp.height < element.sticky.rect.height) || !element.sticky.active) {
@@ -334,6 +337,20 @@ class Sticky {
       this.destroyScrollEvents(element);
       delete element.sticky;
     });
+   }
+
+   enable() {
+     this.forEach(this.elements, (element) => {
+       element.isDisabled = false;
+       this.setPosition(element);
+     });
+   }
+
+   disable() {
+     this.forEach(this.elements, (element) => {
+       element.isDisabled = true;
+       this.css(element, { position: "", width: "", top: "", left: "" });
+     });
    }
 
 

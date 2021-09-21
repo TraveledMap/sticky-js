@@ -99,6 +99,22 @@ var sticky = new Sticky('.sticky');
 sticky.destroy();
 ```
 
+Disable sticky element
+
+```js
+var sticky = new Sticky('.sticky');
+
+sticky.disable();
+```
+
+Enable sticky element
+
+```js
+var sticky = new Sticky('.sticky');
+
+sticky.enable();
+```
+
 ## Available options
 
 Option | Type | Default | Description
